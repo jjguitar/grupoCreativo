@@ -1,0 +1,34 @@
+@import './globalVar';
+
+.Header {
+  background: $main-red;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    height: 40px;
+    width: auto;
+    margin-left: 20px;
+  }
+}
+
+.Header--nav {
+  margin-right: 20px;
+}
+
+.Header--nav_button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 10px;
+  color: $main-white;
+  background: $main-black;
+}
+
+.Header--nav_button:hover {
+  color: $main-black;
+  background: $main-white;
+}
+

@@ -1,0 +1,18 @@
+.Footer-contact__link {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  img {
+    width: 30px;
+    margin-right: 10px;
+  }
+}
+
+.Footer-social {
+  display: flex;
+  justify-content: center;
+  a{
+    padding: 0;
+  }
+}

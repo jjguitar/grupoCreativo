@@ -1,0 +1,17 @@
+@import './globalVar';
+@import './_mediaQuery';
+
+html {
+  font-family: $lato;
+  background-color: $main-white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

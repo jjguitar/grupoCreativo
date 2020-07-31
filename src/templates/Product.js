@@ -1,9 +1,11 @@
-const Product = () => {
+import '../assets/styles/Product.scss'
+
+const Product = ( tittle, img, description) => {
   const view = `
   <div class="Product">
-    <h2 class="Product--tittle">Product</h2>
-    <p class="Product--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda suscipit libero explicabo corporis debitis autem, impedit nisi accusamus sed blanditiis unde, ad dolores. Consectetur quasi suscipit id, cum vel porro!</p>
-    <img class="Product--img" src="">
+    <h2 class="Product--tittle">${tittle}</h2>
+    <p class="Product--description">${description}</p>
+    <img class="Product--img" src="${img}">
   </div>
   `;
   return view;

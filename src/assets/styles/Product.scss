@@ -1,0 +1,31 @@
+@import './globalVar';
+
+.Product {
+  display: grid;
+  grid-template-rows: .1fr .3fr 1fr;
+  font-size: 10px;
+  justify-items: center;
+  margin-bottom: 10px;
+  grid-gap: 10px;
+}
+
+.Product--tittle {
+  background: $main-red;
+  width: 90%;
+  text-align: center;
+  color: $main-white;
+  border: 1px solid $main-black;
+  border-radius: 5px;
+}
+
+.Product--description {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.Product--img {
+  width: 40%;
+  min-width: 90px;
+  min-height: 50px;
+  border-radius: 5px;
+}
