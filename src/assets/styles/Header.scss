@@ -1,7 +1,7 @@
-@import './globalVar';
+@import "./globalVar";
 
 .Header {
-  background: $main-red;
+  background: $main-white;
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -11,24 +11,119 @@
     width: auto;
     margin-left: 20px;
   }
+  border-bottom: 3px solid $main-red;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .Header--nav {
   margin-right: 20px;
 }
 
-.Header--nav_button {
-  margin-left: 5px;
-  padding: 5px 10px;
-  border: 1px solid black;
-  border-radius: 25px;
-  font-size: 10px;
+// .Header--nav_button:hover {
+//   color: $main-black;
+//   background: $main-white;
+// }
+
+.hamburger_menu {
+  width: 35px;
+  height: 30px;
+  //  background: purple;
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: $main-red;
+  transition: all .4s;
+}
+
+.change .line{
+  background-color: $main-white;
+}
+
+.change .line-1 {
+  transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2 {
+  opacity: 0;
+}
+.change .line-3 {
+  transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar {
+  width: 300px;
+  height: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20% 0 0 60%;
+  transition: right .4s cubic-bezier(1, 0, 0, 1);
+}
+
+.change {
+  right: 0;
+}
+
+.nav-list {
+  text-align: right;
+}
+
+.nav-item {
+  margin: 25px;
+}
+
+.nav-link {
+  // margin-left: 5px;
+  // padding: 5px 10px;
+  // border: 1px solid black;
+  // border-radius: 25px;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
   color: $main-white;
-  background: $main-black;
+  padding: 3px 0;
+  // background: $main-black;
 }
 
-.Header--nav_button:hover {
-  color: $main-black;
-  background: $main-white;
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: $main-red;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform .5s;
 }
 
+.nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}

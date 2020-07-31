@@ -9,10 +9,26 @@ const Header = () => {
         <img src="${logo}" alt="logo" class="Header--logo_img" width="300">
       </a>
     </div>
-    <div class="Header--nav">
-      <a href="#" class="Header--nav_button">Products</a>
-      <a href="#" class="Header--nav_button">About</a>
-      <a href="#" class="Header--nav_button">Contact</a>
+    <div class="container">
+      <nav class="navbar">
+        <div class="hamburger_menu">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#content" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="#footer" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#footer" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
   `;
