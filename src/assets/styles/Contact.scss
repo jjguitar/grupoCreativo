@@ -1,0 +1,50 @@
+@import "./globalVar";
+
+.Contact {
+  padding: 20px;
+  background-color: $main-black;
+  color: $main-white;
+  margin-bottom: 20px;
+  h1{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    ::placeholder {
+      color: $main-red;
+    }
+    input {
+      border: none;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 25px;
+    }
+    label {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    textarea {
+      border: none;
+      border-radius: 10px;
+      height: 8em;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: $main-red;
+      border: none;
+      color: $main-white;
+      font-size: 20px;
+      text-transform: capitalize;
+      border-radius: 50px;
+    }
+  }
+}

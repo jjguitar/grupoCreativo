@@ -19,7 +19,10 @@ const Header = () => {
 
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#content" class="nav-link">Products</a>
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#servicios" class="nav-link">Products</a>
           </li>
           <li class="nav-item">
             <a href="#footer" class="nav-link">About</a>

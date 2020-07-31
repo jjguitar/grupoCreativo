@@ -1,3 +1,4 @@
+import Contact from '../templates/Contact'
 import phone from '../assets/img/phone.png'
 import mail from '../assets/img/gmail.png'
 import face from '../assets/img/face.png'
@@ -10,6 +11,7 @@ const Footer = () => {
 
   const view = `
   <div class="Footer">
+    ${Contact()}
     <div class="Footer-contact">
       <a href="#" class="Footer-contact__link">
         <img src="${phone}" alt="phone">

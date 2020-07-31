@@ -1,11 +1,10 @@
 import '../assets/styles/Product.scss'
 
-const Product = ( tittle, img, description) => {
+const Product = ( tittle, img) => {
   const view = `
   <div class="Product">
-    <h2 class="Product--tittle">${tittle}</h2>
-    <p class="Product--description">${description}</p>
     <img class="Product--img" src="${img}">
+    <h2 class="Product--tittle">${tittle}</h2>
   </div>
   `;
   return view;

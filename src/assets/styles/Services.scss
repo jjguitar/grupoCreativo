@@ -1,0 +1,23 @@
+@import './globalVar';
+
+.Home--services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0;
+  h1 {
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  background-color: $second-gray;
+}
+
+.Home--services_tittle,
+.Home--services_subTittle{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  grid-column: 1 / span 2;
+}

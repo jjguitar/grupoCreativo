@@ -1,0 +1,19 @@
+@import "./globalVar";
+@import "./Services";
+
+.Home--clients {
+  @extend .Home--services;
+  background-color: $main-white;
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-align: center;
+    padding: 20px 0;
+    grid-column: 1 / span 2;
+  }
+  img {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
