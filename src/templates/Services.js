@@ -7,6 +7,7 @@ import litografia from '../assets/img/services/litografia.png';
 import materialpop from '../assets/img/services/materialpop.png';
 import promocional from '../assets/img/services/promocional.png';
 import senalizacion from '../assets/img/services/senalizacion.png';
+import otros from '../assets/img/services/otros.png';
 import '../assets/styles/Services.scss';
 
 const Services = () => {
@@ -56,12 +57,13 @@ const Services = () => {
       )}
       ${Product(
         'Otros',
-        litografia,
+        otros,
         'Otros – Nuestra experiencia en el manejo de diferentes materiales y herramientas nos permite innovar frente a la producción. Si tienes una idea y no sabes cómo producirla, nosotros podemos ayudarte. '
       )}
     </div>
     <div class="lightbox">
       <div class="lightbox-content">
+      <div class="lightbox-close">X</div>
         <!-- <img src="" alt="lightbox" class="lightbox-img"> -->
         <div class="lightbox-caption">
           <span class="lightbox-text"></span>

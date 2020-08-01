@@ -13,22 +13,22 @@ const Footer = () => {
   <div class="Footer">
     ${Contact()}
     <div class="Footer-contact">
-      <a href="#" class="Footer-contact__link">
+      <a class="Footer-contact__link big">
         <img src="${phone}" alt="phone">
         ${phoneContact}
       </a>
-      <a href="#" class="Footer-contact__link">
+      <a href="mailto:cesar.tarquino@gmail.com" class="Footer-contact__link big">
         <img src="${mail}" alt="phone">
         ${mailContact}
       </a>
       <a href="#" class="Footer-contact__link">
-        Contact us
+        Contacto
       </a>
       <a href="#" class="Footer-contact__link">
-        Terms
+        Terminos y condiciones
       </a>
       <a href="#" class="Footer-contact__link">
-        Privacy
+        Politica de privacidad
       </a>
     </div>
     <div class="Footer-social">

@@ -3,11 +3,14 @@
     // background: red;
   }
   html {
-    background: $main-red;
+    background: $main-white;
   }
   body {
     max-width: 768px;
     margin: 0 auto;
+  }
+  .hide {
+    display: none;
   }
   .Header {
     height: 80px;
@@ -26,12 +29,20 @@
       }
       .nav-item2 {
         margin-left: 15px;
-        width: 85px;
         text-align: center;
         padding: 5px 10px;
-        border: 1px solid black;
-        border-radius: 25px;
-        background: $main-black;
+        color: $main-black;
+        font-weight: 800;
+        margin: auto 0;
+        border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
+      }
+
+      .nav-item2:first-child {
+        border: none;
+      }
+
+      .nav-item2:hover {
+        color: $main-red;
       }
     }
     .Header--logo img {
@@ -72,6 +83,7 @@
   }
   .Contact {
     padding-left: 30px;
+    border-radius: 15px;
     .Contact--form {
       display: grid;
       grid-template-columns: 40% 60%;
@@ -100,6 +112,24 @@
         grid-area: send;
       }
     }
+  }
+
+  .Footer-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Footer-contact__link {
+    justify-self: center;
+    margin: 20px 0 10px 0;
+  }
+  .Footer-contact__link.big {
+    grid-column: 1 / span 3;
+    justify-self: left;
+    margin: 10px 0;
+  }
+
+  .Footer-contact__link:hover {
+    color: $main-red;
   }
 
 }

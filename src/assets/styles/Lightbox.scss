@@ -55,3 +55,16 @@
     transform: scale(1);
   }
 }
+
+.lightbox-close {
+  position: absolute;
+  z-index: 101;
+  height: 40px;
+  width: 40px;
+  top: 30px;
+  right: 30px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}

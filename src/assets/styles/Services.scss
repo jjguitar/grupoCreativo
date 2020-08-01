@@ -4,12 +4,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 20px 0;
+  justify-items: center;
   h1 {
     font-weight: 900;
-  }
-  h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
   }
   background-color: $second-gray;
 }
