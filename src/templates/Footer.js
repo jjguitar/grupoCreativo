@@ -36,7 +36,7 @@ const Footer = () => {
         <img src="${face}" alt="Facebook">
       </a>
       <a href="#" class="Footer-contact__link">
-        <img src="${instagram}" alt="Instagram">
+        <img class="instagram" src="${instagram}" alt="Instagram">
       </a>
     </div>
   </div>

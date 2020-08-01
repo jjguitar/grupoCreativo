@@ -4,8 +4,11 @@
 .Home--clients {
   @extend .Home--services;
   background-color: $main-white;
+  grid-gap: 10px;
+  justify-items: center;
   h1 {
     font-weight: 900;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: -1px;
     text-align: center;
@@ -15,5 +18,8 @@
   img {
     width: 150px;
     margin: 0 auto;
+  }
+  span {
+    grid-column: 1 / span 2;
   }
 }

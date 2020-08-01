@@ -1,10 +1,115 @@
-// @media only screen and (min-width: 600px) {
-//   .main h2 {
-//     font-size: 30px;
-//   }
+@media only screen and (min-width: 690px) {
+  * {
+    // background: red;
+  }
+  html {
+    background: $main-red;
+  }
+  body {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .Header {
+    height: 80px;
+    color: $main-white;
+    position: absolute;
+    max-width: 768px;
+    .container {
+      display: none;
+    }
+    .container-max {
+      text-transform: uppercase;
+      display: block;
+      margin-right: 20px;
+      .nav-list2 {
+        display: flex;
+      }
+      .nav-item2 {
+        margin-left: 15px;
+        width: 85px;
+        text-align: center;
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background: $main-black;
+      }
+    }
+    .Header--logo img {
+      width: 150px;
+      height: auto;
+    }
+  }
+  .Home-image {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    p {
+      text-align: left;
+    }
+  }
+  .Home--services {
+    grid-template-columns: repeat(3, 1fr);
+    .Product:last-child {
+      grid-column: auto;
+    }
+    .Home--services_tittle,
+    .Home--services_subTittle {
+      grid-column: 1 / span 3;
+    }
+  }
 
-//   footer {
-//     align-items: flex-start;
-//     flex-direction: column;
-//   }
-// }
+  .Home--clients {
+    span {
+      grid-column: span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .last-child {
+      grid-column: 1 / span 2;
+    }
+  }
+  .Contact {
+    padding-left: 30px;
+    .Contact--form {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-areas:  "nameForm message"
+                            "mail message"
+                            "send send";
+      .Contact--form_name {
+        grid-area: nameForm;
+        margin: auto 0;
+        height: 25px;
+      }
+      .Contact--form_mail {
+        grid-area: mail;
+        margin: auto 0;
+        height: 25px;
+      }
+      span {
+        grid-area: message;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 10px 30px;
+      }
+      button {
+        width: 150px;
+        margin: auto;
+        grid-area: send;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .Header {
+    max-width: 1024px;
+  }
+}

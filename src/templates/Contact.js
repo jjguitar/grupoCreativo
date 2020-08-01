@@ -4,16 +4,17 @@ const Contact = () => {
   const view = `
     <div class="Contact">
       <h1>Contáctanos</h1>
-      <p>¿Tienes alguna inquietud o deseas trabajar on nosotros? Escribenos y te ayudaremos.</p>
-      <form action="https://formspree.io/myynoegk" method="POST">
-        <input type="text" name="name" placeholder="Nombre">
-        <input type="text" name="_replyto" placeholder="Correo">
-        <label>
-          mensaje
-        </label>
-        <textarea name="message"></textarea>
+      <p>¿Tienes alguna inquietud o deseas trabajar con nosotros? Escríbenos y te ayudaremos.</p>
+      <form class="Contact--form" action="https://formspree.io/myynoegk" method="POST">
+        <input class="Contact--form_name" Ctype="text" name="name" placeholder="Nombre">
+        <input class="Contact--form_mail" type="text" name="_replyto" placeholder="Correo">
+        <span>
+          <label>
+            mensaje
+          </label>
+          <textarea name="message"></textarea>
+        </span>
         <button type="submit">enviar</button>
-        <input type="hidden" name="_next" value="https://grupocreativo.netlify.app/" />
       </form>
     </div>
   `;

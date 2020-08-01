@@ -13,7 +13,8 @@
   }
   border-bottom: 3px solid $main-red;
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  max-width: 1024px;
   top: 0;
   bottom: 50px;
   z-index: 3;
@@ -21,6 +22,10 @@
 
 .Header--nav {
   margin-right: 20px;
+}
+
+.container-max {
+  display: none;
 }
 
 // .Header--nav_button:hover {

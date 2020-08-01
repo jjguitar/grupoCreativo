@@ -13,43 +13,33 @@
   justify-content: center;
   align-items: center;
   color: $main-white;
-  .lightbox-img {
-    width: calc(100vw - 40px);
-    height: auto;
-    max-width: 100%;
-    max-height: 500px;
-    padding: 40px 0;
-    animation: lightbImage 0.5s ease;
-  }
+  // .lightbox-img {
+  //   width: calc(100vw - 40px);
+  //   height: auto;
+  //   max-width: 100%;
+  //   max-height: 500px;
+  //   padding: 40px 0;
+  //   margin-top: 70px;
+  //   border-radius: 15px;
+  //   animation: lightbImage 0.5s ease;
+  // }
 
-  .lightbox-content {
-    position: relative;
-  }
-
+  cursor: pointer;
   .lightbox-caption {
     font-size: 18px;
-    position: absolute;
     left: 0;
     width: 100%;
-    bottom: -100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     span {
       text-align: center;
       font-size: 26px;
     }
   }
-  .lightbox-close {
-    position: absolute;
-    z-index: 101;
-    right: 0;
-    height: 40px;
-    width: 40px;
-    top: 0;
-    text-align: center;
-    line-height: 40px;
-    font-size: 30px;
-    cursor: pointer;
+
+  .lightbox-text {
+    padding: 0 20px;
   }
 }
 

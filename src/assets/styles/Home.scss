@@ -4,8 +4,9 @@
   font-size: 20px;
 }
 .Home-image {
-  padding: 60px 20px 0;
+  padding: 50px 20px 0;
   display: flex;
+  background: $main-white;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -23,14 +24,14 @@
 
 .Home--CEO {
   background: $main-gray;
-  width: 100vw;
+  width: 100%;
   color: $main-white;
+  text-align: center;
   p{
     font-weight: 700;
     padding: 25px 20px 5px;
   }
   h5 {
-    text-align: center;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 20px;

@@ -14,7 +14,7 @@
     font-size: 18px;
     padding-bottom: 10px;
   }
-  form {
+  .Contact--form {
     display: flex;
     flex-direction: column;
     ::placeholder {
@@ -26,16 +26,20 @@
       padding: 10px;
       border-radius: 25px;
     }
-    label {
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    textarea {
-      border: none;
-      border-radius: 10px;
-      height: 8em;
-      margin-bottom: 20px;
-      padding: 10px;
+    span {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      textarea {
+        border: none;
+        border-radius: 10px;
+        height: 8em;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
     }
     button {
       padding: 10px;

@@ -1,3 +1,5 @@
+@import "./globalVar";
+
 .Footer-contact__link {
   display: flex;
   padding: 0 20px;
@@ -7,6 +9,9 @@
     width: 30px;
     margin-right: 10px;
   }
+  .instagram {
+    width: 40px;
+  }
 }
 
 .Footer-social {
@@ -15,4 +20,8 @@
   a{
     padding: 0;
   }
+}
+
+.Footer {
+  background: $main-white;
 }

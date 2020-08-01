@@ -33,6 +33,24 @@ const Header = () => {
         </ul>
       </nav>
     </div>
+    <div class="container-max">
+      <nav class="navbar2">
+        <ul class="nav-list2">
+          <li class="nav-item2">
+            <a href="#home" class="nav-link2">Home</a>
+          </li>
+          <li class="nav-item2">
+            <a href="#servicios" class="nav-link2">Products</a>
+          </li>
+          <li class="nav-item2">
+            <a href="#footer" class="nav-link2">About</a>
+          </li>
+          <li class="nav-item2">
+            <a href="#footer" class="nav-link2">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
   `;
   return view;
