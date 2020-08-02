@@ -14,31 +14,31 @@ const Clients = () => {
     <section class="Home--clients">
       <h1>clientes</h1>
       <span>
-        <img src="${c1}">
+        <img src="${c1}" loading="lazy">
       </span>
       <span>
-        <img src="${c2}">
+        <img src="${c2}" loading="lazy">
       </span>
       <span>
-        <img src="${c3}">
+        <img src="${c3}" loading="lazy">
       </span>
       <span>
-        <img src="${c4}">
+        <img src="${c4}" loading="lazy">
       </span>
       <span>
-        <img src="${c5}">
+        <img src="${c5}" loading="lazy">
       </span>
       <span>
-        <img src="${c6}">
+        <img src="${c6}" loading="lazy">
       </span>
       <span>
-        <img src="${c7}">
+        <img src="${c7}" loading="lazy">
       </span>
       <span>
-        <img src="${c8}">
+        <img src="${c8}" loading="lazy">
       </span>
       <span class="last-child">
-        <img src="${c9}">
+        <img src="${c9}" loading="lazy">
       </span>
     </section>
   `;

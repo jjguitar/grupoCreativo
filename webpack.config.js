@@ -2,12 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const shouldAnalyze = process.argv.includes('--analyze');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: '[name].bundle.js',
   },
   resolve: {
     extensions: [".js"],
@@ -23,7 +25,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|gif|jpg)$/,
+        test: /\.(png|gif|jpg|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -54,5 +56,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css'
     }),
+    shouldAnalyze ? new BundleAnalyzerPlugin() : () => {},
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };

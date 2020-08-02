@@ -1,5 +1,6 @@
 import '../assets/styles/Product.scss'
 import '../assets/styles/Lightbox.scss'
+import search from '../assets/img/search.png'
 
 const Product = ( tittle, img, description) => {
   const view = `
@@ -9,7 +10,7 @@ const Product = ( tittle, img, description) => {
     <div class="overlay">
       <h2 class="Product--tittle">${tittle}</h2>
       <p class="Product--description">${description}</p>
-      <span class="fa fa-search"></span>
+      <img src="${search}" width="35" class="search" loading="lazy">
     </div>
   </div>
   `;

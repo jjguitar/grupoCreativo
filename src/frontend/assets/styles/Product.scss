@@ -22,28 +22,29 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: scale(0.8);
+    transform: scale(0.9);
     border-radius: 50%;
     h2 {
-      font-size: 22px;
+      font-size: 20px;
       color: $main-white;
-      margin: 20px 0;
+      margin: 18px 0;
       font-weight: 600;
       text-align: center;
     }
-    .fa {
-      display: none;
-      height: 35px;
-      width: 35px;
+    .search {
+      // background-image: url('../img/phone.png');
+      display: inline-block;
+      // height: 35px;
+      // width: 35px;
       text-align: center;
       line-height: 35px;
       border-radius: 5px;
       font-size: 30px;
-      color: $main-black;
+      // color: $main-black;
       background-color: $main-white;
     }
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 }
 .hide {
@@ -67,9 +68,6 @@
 }
 
 .Product:hover .overlay {
-  .fa {
-    display: inline-block;
-  }
   opacity: 1;
   transform: scale(1);
 }
