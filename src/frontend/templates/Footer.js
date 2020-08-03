@@ -22,13 +22,7 @@ const Footer = () => {
         ${mailContact}
       </a>
       <a href="#" class="Footer-contact__link">
-        Contacto
-      </a>
-      <a href="#" class="Footer-contact__link">
-        Terminos y condiciones
-      </a>
-      <a href="#" class="Footer-contact__link">
-        Politica de privacidad
+        ©️ 2020 Grupo CreaActivo S.A.S. Todos los derechos reservados.
       </a>
     </div>
     <div class="Footer-social">
