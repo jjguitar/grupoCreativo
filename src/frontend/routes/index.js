@@ -1,6 +1,8 @@
+/* eslint-disable prefer-const */
 import Header from '../templates/Header';
 import Footer from '../templates/Footer';
 import Home from '../pages/Home';
+import Terms from '../templates/Terms';
 import Error404 from '../pages/Error404';
 import logo from '../assets/img/logo-gc.png';
 import getHash from '../utils/getHash';
@@ -9,6 +11,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 
 const routes = {
   '/': Home,
+  '/terms': Terms,
   '/about': 'About',
 };
 
@@ -27,9 +30,10 @@ const router = async () => {
   setFavicon(logo);
 
   header.innerHTML = await Header();
-  const hash = getHash();
-  const route = await resolveRoutes(hash);
-  const render = routes[route] ? routes[route] : Error404;
+  let hash = getHash();
+  console.log(hash);
+  let route = await resolveRoutes(hash);
+  let render = routes[route] ? routes[route] : Error404;
   content.innerHTML = await render();
   footer.innerHTML = await Footer();
 
@@ -52,10 +56,11 @@ const router = async () => {
   const lightText = document.querySelector('.lightbox-text');
   let index;
   // let imgSrc;
-
-  lightBoxContainer.addEventListener('click', () => {
-    lightBoxContainer.classList.remove('open');
-  });
+  if (route === '/') {
+    lightBoxContainer.addEventListener('click', () => {
+      lightBoxContainer.classList.remove('open');
+    });
+  }
 
   const lightBox = () => {
     lightBoxContainer.classList.toggle('open');

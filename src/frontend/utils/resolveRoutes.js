@@ -4,8 +4,8 @@ const resolveRoutes = (route) => {
       return route;
     } if (route.length <= 3) {
       return '/:id';
-    } if (route.includes('page')) {
-      return '/:pages';
+    } if (route.includes('terms')) {
+      return '/terms';
     }
   }
   console.log(`se fue por route: ${route}`);

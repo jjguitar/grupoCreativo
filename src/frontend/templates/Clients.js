@@ -8,6 +8,7 @@ import c6 from '../assets/img/clients/6.png';
 import c7 from '../assets/img/clients/7.png';
 import c8 from '../assets/img/clients/8.png';
 import c9 from '../assets/img/clients/9.png';
+import c10 from '../assets/img/clients/10.png';
 
 const Clients = () => {
   const view = `
@@ -37,8 +38,11 @@ const Clients = () => {
       <span>
         <img src="${c8}" loading="lazy">
       </span>
-      <span class="last-child">
+      <span>
         <img src="${c9}" loading="lazy">
+      </span>
+      <span>
+        <img src="${c10}" loading="lazy">
       </span>
     </section>
   `;

@@ -21,7 +21,7 @@ const Footer = () => {
         <img src="${mail}" alt="phone">
         ${mailContact}
       </a>
-      <a href="#" class="Footer-contact__link">
+      <a href="#/terms/" class="Footer-contact__link">
         ©️ 2020 Grupo CreaActivo S.A.S. Todos los derechos reservados.
       </a>
     </div>
