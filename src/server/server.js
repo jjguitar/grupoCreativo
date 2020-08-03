@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
-
+import getManifest from './getManifest';
 
 dotenv.config();
 
@@ -18,6 +18,15 @@ if (ENV === 'development') {
 
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
+} else {
+  app.use((req, res, next) => {
+    if (!req.hashManifest) req.hashManifest = getManifest();
+    next();
+  });
+  app.use(express.static(`${__dirname}/public`));
+  app.use(helmet());
+  app.use(helmet.permittedCrossDomainPolicies());
+  app.disable('x-powered-by');
 }
 
 app.get('*', (req, res) => {
