@@ -1,27 +1,34 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const shouldAnalyze = process.argv.includes('--analyze');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const { ENV } = process.env;
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: ['./src/frontend/index.js', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true'],
+  mode: ENV,
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'assets/app.js',
+    publicPath: '/',
   },
   resolve: {
-    extensions: [".js"],
+    extensions: ['.js'],
   },
   module: {
     rules: [
       {
-
         test: /\.js?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
@@ -30,10 +37,10 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/img/[hash].[ext]'
-            }
+              name: 'assets/[hash].[ext]',
+            },
           },
-        ]
+        ],
       },
       {
         test: /\.(s*)css$/,
@@ -44,23 +51,14 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
-      }
+      },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "./public/index.html",
-      filename: "./index.html",
-    }),
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name].css'
+      filename: 'assets/app.css',
     }),
     shouldAnalyze ? new BundleAnalyzerPlugin() : () => {},
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
 };
