@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const shouldAnalyze = process.argv.includes('--analyze');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
@@ -16,17 +16,11 @@ const { ENV } = process.env;
 const isDev = ENV === 'development';
 const entry = ['./src/frontend/index.js'];
 
-if (isDev) {
-  entry.push(
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true',
-  );
-}
-
 module.exports = {
   entry,
   mode: ENV,
   output: {
-    path: path.resolve(__dirname, 'src/server/public'),
+    path: path.resolve(__dirname, 'dist'),
     filename: isDev ? 'assets/app.js' : 'assets/app-[hash].js',
     publicPath: '/',
   },
@@ -97,7 +91,11 @@ module.exports = {
     ],
   },
   plugins: [
-    isDev ? new webpack.HotModuleReplacementPlugin() : () => {},
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: './index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
@@ -114,7 +112,7 @@ module.exports = {
       new CleanWebpackPlugin({
         cleanOnceBeforeBuildPatterns: path.resolve(
           __dirname,
-          'src/server/public',
+          'dist',
         ),
       }),
   ],
