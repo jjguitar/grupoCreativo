@@ -1,7 +1,6 @@
 @import "./globalVar";
 
 .Header {
-  background: $main-white;
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -133,4 +132,7 @@
 .nav-link:hover::before,
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+.change {
+  padding: 60px 0 10px;
 }

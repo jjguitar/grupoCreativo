@@ -1,4 +1,5 @@
 import logo from '../assets/img/logo-gc.png';
+import logoWB from '../assets/img/logo-gc-white.png';
 import '../assets/styles/Header.scss';
 
 const Header = () => {
@@ -6,7 +7,8 @@ const Header = () => {
   <div class="Header">
     <div class="Header--logo">
       <a href="/" class="Header--logo_ankle">
-        <img src="${logo}" alt="logo" class="Header--logo_img" width="300">
+        <img src="${logo}" alt="logo" class="Header--logo_img_dark" width="300">
+        <img src="${logoWB}" alt="logo" class="Header--logo_img_light" width="300">
       </a>
     </div>
     <div class="container">

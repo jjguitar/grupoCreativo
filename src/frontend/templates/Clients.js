@@ -15,6 +15,9 @@ const Clients = () => {
     <section id="clients" class="Home--clients">
       <h1>clientes</h1>
       <span>
+        <img src="${c10}" loading="lazy">
+      </span>
+      <span>
         <img src="${c1}" loading="lazy">
       </span>
       <span>
@@ -40,9 +43,6 @@ const Clients = () => {
       </span>
       <span>
         <img src="${c9}" loading="lazy">
-      </span>
-      <span>
-        <img src="${c10}" loading="lazy">
       </span>
     </section>
   `;

@@ -2,9 +2,6 @@
   * {
     // background: red;
   }
-  html {
-    background: $main-white;
-  }
   .Terms {
     padding-top: 100px;
   }
@@ -34,7 +31,7 @@
         margin-left: 15px;
         text-align: center;
         padding: 5px 10px;
-        color: $main-black;
+        color: var(--background);
         font-weight: 800;
         margin: auto 0;
         border-left: 2px solid rgba($color: #000000, $alpha: 0.2);
@@ -134,7 +131,10 @@
   .Footer-contact__link:hover {
     color: $main-red;
   }
-
+  
+    .change {
+      padding: 110px 0 10px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {

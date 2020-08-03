@@ -4,3 +4,17 @@ $main-black: #000022;
 $main-gray: #A6A6A6;
 $second-gray: #D9D9D9;
 $lato: 'Lato';
+
+:root {
+  --background: #FBF5F3;
+  --card-background: #DE3C4B;
+  --slider: linear-gradient(90deg, rgba(55, 143, 230, 1) 0%, rgba(62, 218, 130, 1) 50%);
+  --title: #000022;
+}
+
+[data-theme=light] {
+  --background: #000022;
+  --card-background: #DE3C4B;
+  --slider: #A6A6A6;
+  --title: #FBF5F3;
+}
