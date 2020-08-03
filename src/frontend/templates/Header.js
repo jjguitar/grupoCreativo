@@ -19,16 +19,16 @@ const Header = () => {
 
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Quiénes somos</a>
           </li>
           <li class="nav-item">
-            <a href="#servicios" class="nav-link">Products</a>
+            <a href="#servicios" class="nav-link">Productos</a>
           </li>
           <li class="nav-item">
-            <a href="#footer" class="nav-link">About</a>
+            <a href="#footer" class="nav-link">Clientes</a>
           </li>
           <li class="nav-item">
-            <a href="#footer" class="nav-link">Contact</a>
+            <a href="#footer" class="nav-link">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -37,16 +37,16 @@ const Header = () => {
       <nav class="navbar2">
         <ul class="nav-list2">
           <li class="nav-item2">
-            <a href="#home" class="nav-link2">Home</a>
+            <a href="#home" class="nav-link2">Quiénes somos</a>
           </li>
           <li class="nav-item2">
-            <a href="#servicios" class="nav-link2">Products</a>
+            <a href="#servicios" class="nav-link2">Productos</a>
           </li>
           <li class="nav-item2">
-            <a href="#footer" class="nav-link2">About</a>
+            <a href="#footer" class="nav-link2">Clientes</a>
           </li>
           <li class="nav-item2">
-            <a href="#footer" class="nav-link2">Contact</a>
+            <a href="#footer" class="nav-link2">Contacto</a>
           </li>
         </ul>
       </nav>
