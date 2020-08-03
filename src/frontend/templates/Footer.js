@@ -6,8 +6,8 @@ import instagram from '../assets/img/insta.png';
 import '../assets/styles/Footer.scss';
 
 const Footer = () => {
-  const phoneContact = '+57 321 456 987';
-  const mailContact = 'contact@grupocreativo.com';
+  const phoneContact = '+57 310 554 2433';
+  const mailContact = 'cesar@grupocreactivo.com';
 
   const view = `
   <div class="Footer">
