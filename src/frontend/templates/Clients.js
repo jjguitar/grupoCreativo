@@ -11,7 +11,7 @@ import c9 from '../assets/img/clients/9.png';
 
 const Clients = () => {
   const view = `
-    <section class="Home--clients">
+    <section id="clients" class="Home--clients">
       <h1>clientes</h1>
       <span>
         <img src="${c1}" loading="lazy">
