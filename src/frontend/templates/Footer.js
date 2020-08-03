@@ -1,8 +1,8 @@
-import Contact from '../templates/Contact'
-import phone from '../assets/img/phone.png'
-import mail from '../assets/img/gmail.png'
-import face from '../assets/img/face.png'
-import instagram from '../assets/img/insta.png'
+import Contact from './Contact';
+import phone from '../assets/img/phone.png';
+import mail from '../assets/img/gmail.png';
+import face from '../assets/img/face.png';
+import instagram from '../assets/img/insta.png';
 import '../assets/styles/Footer.scss';
 
 const Footer = () => {
@@ -42,6 +42,6 @@ const Footer = () => {
   </div>
   `;
   return view;
-}
+};
 
 export default Footer;

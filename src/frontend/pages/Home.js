@@ -1,7 +1,7 @@
-import home from "../assets/img/logo-gc.png";
-import Services from '../templates/Services'
+import home from '../assets/img/logo-gc.png';
+import Services from '../templates/Services';
 import Clients from '../templates/Clients';
-import "../assets/styles/Home.scss";
+import '../assets/styles/Home.scss';
 
 const Home = () => {
   const view = `

@@ -1,15 +1,8 @@
 @import './globalVar';
 @import './_mediaQuery';
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html.wf-active {
-  font-family: $lato;
-}
-
 * {
+  font-family: $lato;
   margin: 0;
   padding: 0;
   outline: none;

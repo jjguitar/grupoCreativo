@@ -1,4 +1,4 @@
-import Product from '../templates/Product';
+import Product from './Product';
 import avisos from '../assets/img/services/avisos.png';
 import estampados from '../assets/img/services/estampados.png';
 import stands from '../assets/img/services/stands.png';
@@ -16,50 +16,50 @@ const Services = () => {
       <h1 class="Home--services_tittle">Servicios</h1>
       <h2 class="Home--services_subTittle">Portafolio</h2>
       ${Product(
-        'Elaboración avisos',
-        avisos,
-        'Elaboración Avisos – Luminosos, lonas flexibles, iluminación Led, neón, acrílicos, letras volumétricas en madera, acero, lamina, bronce y aluminio. '
-      )}
+    'Elaboración avisos',
+    avisos,
+    'Elaboración Avisos – Luminosos, lonas flexibles, iluminación Led, neón, acrílicos, letras volumétricas en madera, acero, lamina, bronce y aluminio. ',
+  )}
       ${Product(
-        'Vinilos',
-        adhesivos,
-        'Vinilos adhesivos – Para vehículos, murales, gigantografías, calcomanías, decoración de interiores, vitrinismo, plotter de corte.'
-      )}
+    'Vinilos',
+    adhesivos,
+    'Vinilos adhesivos – Para vehículos, murales, gigantografías, calcomanías, decoración de interiores, vitrinismo, plotter de corte.',
+  )}
       ${Product(
-        'Señalización',
-        senalizacion,
-        'Señalización – Interior y exterior. Señalización de normas establecidas en hospitales, instituciones comerciales, bancarias o industriales.'
-      )}
+    'Señalización',
+    senalizacion,
+    'Señalización – Interior y exterior. Señalización de normas establecidas en hospitales, instituciones comerciales, bancarias o industriales.',
+  )}
       ${Product(
-        'Material POP',
-        materialpop,
-        'Material POP – Tropezones, siluetas publicitarias, floorgraphics, móviles, dummies inflables, pendones y porta pendones. '
-      )}
+    'Material POP',
+    materialpop,
+    'Material POP – Tropezones, siluetas publicitarias, floorgraphics, móviles, dummies inflables, pendones y porta pendones. ',
+  )}
       ${Product(
-        'Material Promocional',
-        promocional,
-        'Material Promocional – Esferos, mugs, botones, mousepads, camisetas, gorras, tapetes publicitarios, sombrillas, etc. '
-      )}
+    'Material Promocional',
+    promocional,
+    'Material Promocional – Esferos, mugs, botones, mousepads, camisetas, gorras, tapetes publicitarios, sombrillas, etc. ',
+  )}
       ${Product(
-        'Exhibidores y stands',
-        stands,
-        'Exhibidores y stands – Diseño y fabricación de módulos de exhibición personalizados para cualquier producto. Usamos diferentes materiales según el diseño (MDF – TABLEX, vidrio, cartón, poliestireno y acrílico). '
-      )}
+    'Exhibidores y stands',
+    stands,
+    'Exhibidores y stands – Diseño y fabricación de módulos de exhibición personalizados para cualquier producto. Usamos diferentes materiales según el diseño (MDF – TABLEX, vidrio, cartón, poliestireno y acrílico). ',
+  )}
       ${Product(
-        'Estampados',
-        estampados,
-        'Estampados – Sobre textiles, plástico, cartón, papel y otros. Usamos diferentes técnicas dependiendo de la superficie a estampar. '
-      )}
+    'Estampados',
+    estampados,
+    'Estampados – Sobre textiles, plástico, cartón, papel y otros. Usamos diferentes técnicas dependiendo de la superficie a estampar. ',
+  )}
       ${Product(
-        'Litografía',
-        litografia,
-        'luminosos, lonas flexibles, iluminación Led, neón, acrílicos, letras volumétricas en madera, acero, lamina, bronce y aluminio. '
-      )}
+    'Litografía',
+    litografia,
+    'luminosos, lonas flexibles, iluminación Led, neón, acrílicos, letras volumétricas en madera, acero, lamina, bronce y aluminio. ',
+  )}
       ${Product(
-        'Otros',
-        otros,
-        'Otros – Nuestra experiencia en el manejo de diferentes materiales y herramientas nos permite innovar frente a la producción. Si tienes una idea y no sabes cómo producirla, nosotros podemos ayudarte. '
-      )}
+    'Otros',
+    otros,
+    'Otros – Nuestra experiencia en el manejo de diferentes materiales y herramientas nos permite innovar frente a la producción. Si tienes una idea y no sabes cómo producirla, nosotros podemos ayudarte. ',
+  )}
     </div>
     <div class="lightbox">
       <div class="lightbox-content">

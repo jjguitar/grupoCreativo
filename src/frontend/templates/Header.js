@@ -1,5 +1,5 @@
-import logo from '../assets/img/logo-gc.png'
-import '../assets/styles/Header.scss'
+import logo from '../assets/img/logo-gc.png';
+import '../assets/styles/Header.scss';
 
 const Header = () => {
   const view = `
@@ -54,6 +54,6 @@ const Header = () => {
   </div>
   `;
   return view;
-}
+};
 
 export default Header;

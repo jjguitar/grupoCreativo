@@ -2,8 +2,10 @@ import Header from '../templates/Header';
 import Footer from '../templates/Footer';
 import Home from '../pages/Home';
 import Error404 from '../pages/Error404';
-import logo from '../assets/img/logo-gc.png'
+import logo from '../assets/img/logo-gc.png';
+import getHash from '../utils/getHash';
 import '../assets/styles/App.scss';
+import resolveRoutes from '../utils/resolveRoutes';
 
 const routes = {
   '/': Home,
@@ -16,8 +18,8 @@ const router = async () => {
   const footer = null || document.getElementById('footer');
 
   function setFavicon(favImg) {
-    let headTitle = document.querySelector('head');
-    let setFavicon = document.createElement('link');
+    const headTitle = document.querySelector('head');
+    const setFavicon = document.createElement('link');
     setFavicon.setAttribute('rel', 'shortcut icon');
     setFavicon.setAttribute('href', favImg);
     headTitle.appendChild(setFavicon);
@@ -25,7 +27,10 @@ const router = async () => {
   setFavicon(logo);
 
   header.innerHTML = await Header();
-  content.innerHTML = await Home();
+  const hash = getHash();
+  const route = await resolveRoutes(hash);
+  const render = routes[route] ? routes[route] : Error404;
+  content.innerHTML = await render();
   footer.innerHTML = await Footer();
 
   const menuIcon = document.querySelector('.hamburger_menu');
@@ -41,9 +46,9 @@ const router = async () => {
   });
 
   const lightBoxContainer = document.querySelector('.lightbox');
-  const lightBoxImg = document.querySelector('.lightbox-img');
+  // const lightBoxImg = document.querySelector('.lightbox-img');
   const portfolioItems = document.querySelectorAll('.Product');
-  const lightClose = document.querySelector('.lightbox-close');
+  // const lightClose = document.querySelector('.lightbox-close');
   const lightText = document.querySelector('.lightbox-text');
   let index;
   // let imgSrc;
@@ -51,15 +56,6 @@ const router = async () => {
   lightBoxContainer.addEventListener('click', () => {
     lightBoxContainer.classList.remove('open');
   });
-
-  for (let i = 0; i < portfolioItems.length; i++) {
-    portfolioItems[i].addEventListener('click', () => {
-      index = i;
-      // console.log(portfolioItems[i].querySelector('.Product--description'))
-      lightBox();
-      changeImage();
-    });
-  }
 
   const lightBox = () => {
     lightBoxContainer.classList.toggle('open');
@@ -70,9 +66,18 @@ const router = async () => {
     // // console.log(imgSrc)
     // lightBoxImg.src = imgSrc
     lightText.innerHTML = portfolioItems[index].querySelector(
-      '.Product--description'
+      '.Product--description',
     ).innerHTML;
   };
+  for (let i = 0; i < portfolioItems.length; i++) {
+    portfolioItems[i].addEventListener('click', () => {
+      index = i;
+      // console.log(portfolioItems[i].querySelector('.Product--description'))
+      lightBox();
+      changeImage();
+    });
+  }
+
 };
 
 export default router;

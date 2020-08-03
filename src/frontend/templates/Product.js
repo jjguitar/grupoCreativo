@@ -1,8 +1,8 @@
-import '../assets/styles/Product.scss'
-import '../assets/styles/Lightbox.scss'
-import search from '../assets/img/search.png'
+import '../assets/styles/Product.scss';
+import '../assets/styles/Lightbox.scss';
+import search from '../assets/img/search.png';
 
-const Product = ( tittle, img, description) => {
+const Product = (tittle, img, description) => {
   const view = `
   <div class="Product">
     <img class="Product--img" src="${img}" width="90">
@@ -15,6 +15,6 @@ const Product = ( tittle, img, description) => {
   </div>
   `;
   return view;
-}
+};
 
 export default Product;

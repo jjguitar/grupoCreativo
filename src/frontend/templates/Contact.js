@@ -1,4 +1,4 @@
-import '../assets/styles/Contact.scss'
+import '../assets/styles/Contact.scss';
 
 const Contact = () => {
   const view = `
